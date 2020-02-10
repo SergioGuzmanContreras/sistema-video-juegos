@@ -1,0 +1,17 @@
+.project
+.settings/
+### archivos a ignorar del api
+api/.classpath
+api/.project
+api/.settings/
+api/target/
+### archivos a ignorar del service
+service/.classpath
+service/.project
+service/.settings/
+service/target/
+### archivos a ignorar en la persistencia
+persistence/.classpath
+persistence/.project
+persistence/.settings/
+persistence/target/
