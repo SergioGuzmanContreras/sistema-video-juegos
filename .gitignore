@@ -1,10 +1,10 @@
 .project
 .settings/
 ### archivos a ignorar del api
-api/.classpath
-api/.project
-api/.settings/
-api/target/
+game-api/.classpath
+game-api/.project
+game-api/.settings/
+game-api/target/
 ### archivos a ignorar del service
 service/.classpath
 service/.project
@@ -15,3 +15,4 @@ persistence/.classpath
 persistence/.project
 persistence/.settings/
 persistence/target/
+/game-api/target/
