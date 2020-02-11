@@ -6,10 +6,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>sistema-video-juegos</name>
-  <description>Sistema para dar reseña de una serie de video juegos</description>
+  <description>Sistema para dar rese�a de una serie de video juegos</description>
   <modules>
-    <module>api</module>
-    <module>service</module>
-    <module>persistence</module>
+    <module>game-api</module>
   </modules>
 </project>
