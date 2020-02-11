@@ -9,5 +9,7 @@
   <description>Sistema para dar rese�a de una serie de video juegos</description>
   <modules>
     <module>game-api</module>
+    <module>game-service</module>
+    <module>game-persistence</module>
   </modules>
 </project>

@@ -6,13 +6,12 @@ game-api/.project
 game-api/.settings/
 game-api/target/
 ### archivos a ignorar del service
-service/.classpath
-service/.project
-service/.settings/
-service/target/
+game-service/.classpath
+game-service/.project
+game-service/.settings/
+game-service/target/
 ### archivos a ignorar en la persistencia
-persistence/.classpath
-persistence/.project
-persistence/.settings/
-persistence/target/
-/game-api/target/
+game-persistence/.classpath
+game-persistence/.project
+game-persistence/.settings/
+game-persistence/target/
