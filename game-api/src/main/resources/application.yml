@@ -9,3 +9,16 @@ spring:
         encoding:
             charset: UTF-8
             enabled: true
+    datasource:
+        url: jdbc:mysql://127.0.0.1/videoJuegos?serverTimezone=GMT-6
+        driver: com.mysql.jdbc.Driver
+        username: admin
+        password: admin
+        testWhileIdle: true
+        initialize: true
+        hikari:
+            maximum-pool-size: 10
+    jpa:
+        hibernate:
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

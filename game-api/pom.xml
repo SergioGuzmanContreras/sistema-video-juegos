@@ -47,6 +47,7 @@
             <groupId>mx.com.ersoft</groupId>
             <artifactId>game-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 
