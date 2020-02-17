@@ -4,6 +4,9 @@ server:
         context-path: /resena
         
 spring:
+    output:
+        ansi:
+            enabled: always
     #mandatory-file-encoding: UTF-8
     http:
         encoding:
@@ -16,7 +19,7 @@ spring:
         password: admin
         testWhileIdle: true
         initialize: true
-        hikari:
+        hikari: 
             maximum-pool-size: 10
     jpa:
         hibernate:

@@ -49,9 +49,9 @@ CREATE TABLE videoJuegos.distribuidor(
     CONSTRAINT uq001distribuidor UNIQUE (nombre)
 )ENGINE = INNODB;
 INSERT INTO videoJuegos.distribuidor (nombre, web) VALUES
-('SNK', 'https://www.snk-corp.co.jp/us/'),
-('NINTENDO', 'https://www.nintendo.es/'),
-('CAPCOM', 'http://www.capcom.com/');
+('Estafeta', 'https://www.estafeta.com/'),
+('DHL', 'https://www.logistics.dhl/mx-es/home.html'),
+('Federal Express', 'https://www.fedex.com/es-mx/home.html');
 ALTER TABLE videoJuegos.videoJuegos ADD COLUMN id_distribuidor INT;
 UPDATE videoJuegos.videoJuegos SET id_distribuidor = 1 WHERE id_video_juego = 1;
 UPDATE videoJuegos.videoJuegos SET id_distribuidor = 2 WHERE id_video_juego = 2;
@@ -63,3 +63,26 @@ UPDATE videoJuegos.videoJuegos SET id_distribuidor = 1 WHERE id_video_juego = 7;
 UPDATE videoJuegos.videoJuegos SET id_distribuidor = 2 WHERE id_video_juego = 8;
 UPDATE videoJuegos.videoJuegos SET id_distribuidor = 3 WHERE id_video_juego = 9;
 ALTER TABLE videoJuegos.videoJuegos ADD CONSTRAINT fk001videoJuegos FOREIGN KEY (id_distribuidor) REFERENCES videoJuegos.distribuidor(id_distribuidor);
+CREATE TABLE videoJuegos.desarrollador(
+    id_desarrollador INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(200) not null,
+    web TEXT,
+    CONSTRAINT pk003desarrollador PRIMARY KEY (id_desarrollador),
+    CONSTRAINT uq001desarrollador  UNIQUE (nombre)
+) ENGINE = INNODB;
+INSERT INTO videoJuegos.desarrollador (nombre, web) VALUES
+('SNK', 'https://www.snk-corp.co.jp/us/'),
+('NINTENDO', 'https://www.nintendo.es/'),
+('CAPCOM', 'http://www.capcom.com/');
+ALTER TABLE videoJuegos.videoJuegos ADD COLUMN id_desarrollador INT;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 1 WHERE id_video_juego = 1;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 2 WHERE id_video_juego = 2;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 3 WHERE id_video_juego = 3;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 1 WHERE id_video_juego = 4;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 2 WHERE id_video_juego = 5;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 3 WHERE id_video_juego = 6;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 1 WHERE id_video_juego = 7;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 2 WHERE id_video_juego = 8;
+UPDATE videoJuegos.videoJuegos SET id_desarrollador = 3 WHERE id_video_juego = 9;
+ALTER TABLE videoJuegos.videoJuegos ADD CONSTRAINT fk002videoJuegos FOREIGN KEY (id_desarrollador) REFERENCES videoJuegos.desarrollador(id_desarrollador);
+BLE videoJuegos.videoJuegos ADD CONSTRAINT fk001videoJuegos FOREIGN KEY (id_distribuidor) REFERENCES videoJuegos.distribuidor(id_distribuidor);

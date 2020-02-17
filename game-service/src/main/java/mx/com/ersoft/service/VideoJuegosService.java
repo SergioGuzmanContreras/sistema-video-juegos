@@ -12,4 +12,9 @@ import mx.com.ersoft.model.VideoJuegosModel;
 public interface VideoJuegosService {
 
     List<VideoJuegosModel> getDestacados();
+    List<VideoJuegosModel> getAll();
+    List<VideoJuegosModel> getForDistribuitor(int id);
+    List<VideoJuegosModel> findByNombreContaining(String buscar);
+
 }
+

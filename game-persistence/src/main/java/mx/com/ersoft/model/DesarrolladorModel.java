@@ -10,16 +10,15 @@ import javax.persistence.Table;
 
 /**
  * @author Erik Sergio Guzman Contreras
- * @created Feb 12, 2020
+ * @created Feb 16, 2020
 **/
-
 @Entity
-@Table(name = "distribuidor")
-public class DistribuidorModel {
+@Table(name = "desarrollador")
+public class DesarrolladorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_distribuidor")
+    @Column(name = "id_desarrollador")
     private int id;
     @Column(name = "nombre")
     private String nombre;
@@ -35,6 +34,8 @@ public class DistribuidorModel {
     public void setWeb(String web) { this.web = web; }
 
     @Override
-    public String toString() { return "DistribuidorModel{" + "id=" + id + ", nombre=" + nombre + ", web=" + web + '}'; }    
+    public String toString() {
+        return "DesarrolladorModel{" + "id=" + id + ", nombre=" + nombre + ", web=" + web + '}';
+    }    
     
 }

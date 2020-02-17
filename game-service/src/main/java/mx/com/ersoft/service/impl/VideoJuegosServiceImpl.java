@@ -1,6 +1,5 @@
 package mx.com.ersoft.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 import mx.com.ersoft.dao.VideoJuegosDao;
 import mx.com.ersoft.model.VideoJuegosModel;
@@ -23,6 +22,21 @@ public class VideoJuegosServiceImpl implements VideoJuegosService{
     @Override
     public List<VideoJuegosModel> getDestacados() {
         return videoJuegosDao.findAll();
+    }
+
+    @Override
+    public List<VideoJuegosModel> getAll() {
+        return videoJuegosDao.getAll();
+    }
+
+    @Override
+    public List<VideoJuegosModel> getForDistribuitor(int id) {
+        return videoJuegosDao.getForDistribuitor(id);
+    }
+
+    @Override
+    public List<VideoJuegosModel> findByNombreContaining(String buscar) {
+        return videoJuegosDao.findByNombreContaining(buscar);
     }
 
 }

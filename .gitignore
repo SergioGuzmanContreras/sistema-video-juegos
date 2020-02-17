@@ -5,6 +5,7 @@ game-api/.classpath
 game-api/.project
 game-api/.settings/
 game-api/target/
+game-api/nbactions.xml
 ### archivos a ignorar del service
 game-service/.classpath
 game-service/.project
